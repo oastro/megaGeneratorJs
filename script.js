@@ -1,8 +1,9 @@
-function gerarNumeros(quantidadeJogos) {
+function gerarNumeros(quantidadeNumeros, quantidadeJogos) {
     const meuJogo = []
-    for (let index = 0; index < quantidadeJogos; index++) {
+
+    while (meuJogo.length < quantidadeJogos) {
         const numeros = []
-        for (let index = 0; index < 6; index++) {
+        while (numeros.length < quantidadeNumeros) {
             numeros.push(Math.floor(Math.random() * 60))
         }
         meuJogo.push(numeros)
@@ -10,4 +11,4 @@ function gerarNumeros(quantidadeJogos) {
     console.log(meuJogo)
 }
 
-gerarNumeros(5)
+gerarNumeros(6, 5)
